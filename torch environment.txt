@@ -1,0 +1,83 @@
+############콘다 가상환경 만들기 및 패키지 설치#######
+conda create -n yourenvname python=x.x anaconda
+conda create -c conda-forge python=3.9 --name [이름]
+
+source activate yourenvname
+conda install -n yourenvname [package]
+
+## conda 가상환경 삭제
+conda remove --name tensorflow35 --all
+conda env remove --name yourenvname
+
+############## 주피터 커널 만들기##################
+conda install ipykernel
+pip install ipykernel
+
+python -m ipykernel install --user --name [virtualEnv] --display-name "[displayKenrelName]"
+
+ex)
+python -m ipykernel install --user --name h2o4gpu --display-name h2o4gpu
+
+# 주피터 커널 리스트
+jupyter kernelspec list
+
+## 주피터에 뜨는 커널 지우기
+jupyter kernelspec uninstall yourKernel
+
+############ module 설치 ###############
+conda install -c conda-forge ipykernel
+jupyter lab conda install -c conda-forge jupyterlab
+nodejs conda install -c conda-forge nodejs
+
+numpy 
+pandas
+networkx pip install networkx
+matplotlib 
+seaborn 
+tqdm
+sklearn pip install -U scikit-learn
+pytorch conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch -c conda-forge
+umap-learn pip install umap-learn
+visdom pip install visdom
+plotly conda install -c plotly plotly=4.14.3
+
+scikit-image python -m pip install -U scikit-image
+opencv pip install opencv-python
+astropy pip install astropy
+
+
+plotly jupyterlab extension conda install jupyterlab "ipywidgets>=7.5"
+jupyter labextension install jupyterlab-plotly@4.14.3
+(optional) jupyter labextension install @jupyter-widgets/jupyterlab-manager plotlywidget@4.14.3 
+
+
+pycaret pip install pycaret
+anytree pip install anytree
+fil_finder  pip install fil_finder 
+torchsummary pip install torchsummary
+
+pytorch geometric
+pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
+pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
+pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
+pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
+pip install torch-geometric
+
+pip install allensdk
+#########################################################################
+
+### scanpy용############################################################
+statsmodels numba pytables conda install seaborn scikit-learn statsmodels numba pytables
+python-igraph leidenalg ::: 이거 이상함 이거깔면 import torch 안됨 
+#####################################################################
+
+############ jupyter interactive plot#######################
+conda install -y nodejs
+pip install ipympl
+pip install --upgrade jupyterlab
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install jupyter-matplotlib
+jupyter nbextension enable --py widgetsnbextension
+
+
+ 
