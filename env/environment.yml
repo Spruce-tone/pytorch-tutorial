@@ -191,4 +191,4 @@ dependencies:
   - zipp=3.6.0=pyhd3eb1b0_0
   - zlib=1.2.11=h8ffe710_1013
   - zstd=1.5.0=h6255e5f_0
-prefix: C:\Users\spruce\anaconda3\envs\light
+# prefix: C:\Users\spruce\anaconda3\envs\light

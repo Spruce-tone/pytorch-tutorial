@@ -2,3 +2,6 @@
 data
 saved_models
 **/*.pdf
+__pycache__
+MNIST
+env_ver_rm.py
