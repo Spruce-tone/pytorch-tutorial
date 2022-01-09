@@ -6,7 +6,6 @@ import os
 import pytorch_lightning as pl
 from pytorch_lightning.utilities.types import _EVALUATE_OUTPUT, _PREDICT_OUTPUT, EVAL_DATALOADERS, TRAIN_DATALOADERS
 
-
 class MNISTDataModule(pl.LightningDataModule):
 
     def prepare_data(self) -> None:
