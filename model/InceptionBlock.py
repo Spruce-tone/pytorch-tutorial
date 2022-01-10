@@ -38,7 +38,7 @@ class InceptionBlock(nn.Module):
         self.max_pool = nn.Sequential(
             nn.MaxPool2d(kernel_size=3, padding=1, stride=1),
             nn.Conv2d(c_in, c_out['max'], kernel_size=1),
-            nn.BatchNorm2d(c_out['max'])
+            nn.BatchNorm2d(c_out['max']),
             act_fn())
 
     def forward(self, x):
