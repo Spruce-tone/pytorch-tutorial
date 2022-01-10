@@ -1,4 +1,5 @@
 from torch import nn
+import torch
 
 class InceptionBlock(nn.Module):
     def __init__(self, c_in, c_red: dict, c_out: dict, act_fn):
