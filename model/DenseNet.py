@@ -24,10 +24,10 @@ class DenseLayer(nn.Module):
             nn.Conv2d(bn_size * growth_rate, growth_rate, kernel_size=3, padding=1, bias=False)
         )
 
-        def forward(self, x):
-            out = self.net(x)
-            out = torch.cat([out, x], dim=1)
-            return out
+    def forward(self, x):
+        out = self.net(x)
+        out = torch.cat([out, x], dim=1)
+        return out
 
 class DenseBlock(nn.Module):
     def __init__(self, c_in, num_layers, bn_size, growth_rate, act_fn):
@@ -48,9 +48,9 @@ class DenseBlock(nn.Module):
             layers.append(DenseLayer(c_in=layer_c_in, bn_size=bn_size, growth_rate=growth_rate, act_fn=act_fn))
             self.block = nn.Sequential(*layers)
 
-            def forward(self, x):
-                out = self.block(x)
-                return out
+    def forward(self, x):
+        out = self.block(x)
+        return out
 
 class TransitionLayer(nn.Module):
     def __init__(self, c_in, c_out, act_fn):
